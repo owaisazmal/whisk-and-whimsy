@@ -152,11 +152,11 @@ export default function Footer() {
           <Ladybug className="absolute bottom-8 left-1/3 size-8 animate-sway" />
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t-2 border-matcha/25 pt-6 text-xs text-cream/60 sm:flex-row">
+        <div className="mt-14 border-t-2 border-matcha/25 pt-6 text-center text-xs text-cream/60">
           <p>
-            © {new Date().getFullYear()} {site.name}. Baked with butter.
+            © {new Date().getFullYear()} — Built by {site.builtBy} for {site.name}. Baked with
+            butter.
           </p>
-          <p>Placeholder copy &amp; illustrations — swap in real photos any time.</p>
         </div>
       </div>
     </footer>

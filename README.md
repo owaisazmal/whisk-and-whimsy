@@ -20,6 +20,7 @@ React 19 · Vite · Tailwind v4 · Motion (Framer) · Embla Carousel.
 | I want to change…                     | Edit                                             |
 | ------------------------------------- | ------------------------------------------------ |
 | Business name, phone, email, hours    | `src/site.config.js`                             |
+| Footer credit line / build attribution | `src/site.config.js` (`builtBy`)                |
 | Menu items and prices                 | `src/data/menu.js`                               |
 | Party packages / testimonials / steps | `src/data/menu.js`                               |
 | Colours, fonts, the sticker look      | `src/index.css` (`@theme` block)                 |

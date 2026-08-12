@@ -21,6 +21,7 @@ export const site = {
     { day: "Sun – Mon", time: "Resting the dough" },
   ],
   leadTime: "Please order 5–7 days ahead. Rush orders when the oven allows.",
+  builtBy: "Owais Khan",
 };
 
 export const navLinks = [
