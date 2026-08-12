@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
 /**
@@ -6,11 +7,17 @@ import { motion, useReducedMotion } from "motion/react";
  *
  *   <Marquee speed={26} reverse>…</Marquee>
  *
- * `pauseOnHover` uses a CSS-driven play-state so it costs nothing at runtime.
+ * `repeat` duplicates the children *inside* each track. A short word list can
+ * produce a track narrower than half the viewport, which leaves a visible gap
+ * on wide monitors — bump `repeat` until `2 × repeat × trackWidth` comfortably
+ * exceeds the widest screen you care about. Scroll speed is held constant:
+ * the duration scales with `repeat`, so the ribbon moves at the same px/sec
+ * however many copies are in it.
  */
 export default function Marquee({
   children,
   speed = 30,
+  repeat = 1,
   reverse = false,
   className = "",
   itemClassName = "",
@@ -18,16 +25,20 @@ export default function Marquee({
 }) {
   const reduce = useReducedMotion();
 
+  const content = Array.from({ length: repeat }, (_, i) => (
+    <Fragment key={i}>{children}</Fragment>
+  ));
+
   const track = (
     <div className={`flex shrink-0 items-center ${itemClassName}`} aria-hidden="true">
-      {children}
+      {content}
     </div>
   );
 
   if (reduce) {
     return (
       <div className={`flex overflow-hidden ${className}`} {...rest}>
-        <div className={`flex shrink-0 items-center ${itemClassName}`}>{children}</div>
+        <div className={`flex shrink-0 items-center ${itemClassName}`}>{content}</div>
       </div>
     );
   }
@@ -37,9 +48,9 @@ export default function Marquee({
       <motion.div
         className="flex shrink-0 will-change-transform"
         animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
-        transition={{ duration: speed, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: speed * repeat, repeat: Infinity, ease: "linear" }}
       >
-        <div className={`flex shrink-0 items-center ${itemClassName}`}>{children}</div>
+        <div className={`flex shrink-0 items-center ${itemClassName}`}>{content}</div>
         {track}
       </motion.div>
     </div>

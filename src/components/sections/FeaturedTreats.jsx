@@ -86,7 +86,6 @@ export default function FeaturedTreats() {
           <Carousel
             label="Featured treats"
             delay={3800}
-            gapClassName="gap-6"
             dotActive="bg-sunbutter"
             dotIdle="bg-cream hover:bg-matcha"
             slideClassName="min-w-0 shrink-0 grow-0 basis-[82%] sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"

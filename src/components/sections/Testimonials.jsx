@@ -73,7 +73,6 @@ export default function Testimonials() {
           <Carousel
             label="Customer reviews"
             delay={5200}
-            gapClassName="gap-6"
             slideClassName="min-w-0 shrink-0 grow-0 basis-full md:basis-1/2"
             dotActive="bg-forest"
             dotIdle="bg-paper hover:bg-matcha"

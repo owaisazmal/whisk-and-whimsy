@@ -22,7 +22,16 @@ export default function Carousel({
   options = {},
   slideClassName = "min-w-0 shrink-0 grow-0 basis-full",
   className = "",
-  gapClassName = "gap-6",
+  /**
+   * Spacing between slides. Applied as left padding on each slide, with a
+   * matching negative margin on the track — NOT as flex `gap`.
+   *
+   * In loop mode Embla repositions wrapped slides by a distance derived from
+   * slide box widths, and CSS `gap` is not part of that box. Using `gap` makes
+   * the spacing collapse at the seam where the last slide meets the first.
+   * Padding lives inside the slide's box, so Embla measures it correctly.
+   */
+  gap = "1.5rem",
   showArrows = true,
   showDots = true,
   label = "carousel",
@@ -68,11 +77,12 @@ export default function Carousel({
   return (
     <div className={className}>
       <div className="overflow-hidden" ref={emblaRef} aria-roledescription="carousel" aria-label={label}>
-        <div className={`flex touch-pan-y ${gapClassName}`}>
+        <div className="flex touch-pan-y" style={{ marginLeft: `calc(${gap} * -1)` }}>
           {slides.map((slide, i) => (
             <div
               key={i}
               className={slideClassName}
+              style={{ paddingLeft: gap }}
               role="group"
               aria-roledescription="slide"
               aria-label={`${i + 1} of ${slides.length}`}
