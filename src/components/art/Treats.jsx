@@ -146,28 +146,27 @@ export function RiceKrispie({ className = "", ...rest }) {
 /* ====================================================================== */
 
 export function Pretzel({ dip = "stroke-diamond", className = "", ...rest }) {
+  const id = useId();
   const knot =
     "M60 100 C20 96 14 44 44 36 C62 31 72 52 60 70 C48 52 58 31 76 36 C106 44 100 96 60 100";
   return (
     <svg viewBox="0 0 120 120" className={base(className)} {...rest}>
+      <defs>
+        {/* the chocolate line — everything below it gets dipped */}
+        <clipPath id={`${id}-dip`}>
+          <path d="M-6 66 C10 60 20 74 36 68 C52 62 64 76 80 70 C94 65 110 70 126 64 L126 126 L-6 126 Z" />
+        </clipPath>
+      </defs>
+
       <path d={knot} className={OUTLINE} strokeWidth={24} fill="none" strokeLinecap="round" strokeLinejoin="round" />
       <path d={knot} className="stroke-caramel" strokeWidth={18} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <path
-        d="M60 100 C20 96 14 44 44 36"
-        className={OUTLINE}
-        strokeWidth={24}
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path d="M60 100 C20 96 14 44 44 36" className={dip} strokeWidth={18} fill="none" strokeLinecap="round" />
-      <path
-        d="M60 100 C42 98 30 86 24 70"
-        className="stroke-paper/40"
-        strokeWidth={5}
-        fill="none"
-        strokeLinecap="round"
-      />
-      <Sprinkles points={[[18, 62, 70], [26, 84, 30], [40, 92, -10], [22, 46, 50]]} />
+
+      <g clipPath={`url(#${id}-dip)`}>
+        <path d={knot} className={OUTLINE} strokeWidth={24} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d={knot} className={dip} strokeWidth={18} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+
+      <Sprinkles points={[[24, 78, 70], [46, 92, 18], [72, 84, -28], [58, 74, 40]]} />
     </svg>
   );
 }
@@ -472,29 +471,49 @@ export function RoundCake({ body = "fill-diamond", drip = "fill-icing", classNam
 
 function Loaf({ crumb, speckle, garnish, className = "", ...rest }) {
   const bits = [
-    [38, 74], [56, 84], [74, 70], [48, 62], [82, 88], [64, 60], [32, 90],
+    [36, 80], [54, 90], [72, 76], [46, 68], [84, 88], [64, 66], [30, 94],
   ];
   return (
     <svg viewBox="0 0 120 120" className={base(className)} {...rest}>
+      {/* board */}
+      <path d="M10 108 L110 108" className={OUTLINE} strokeWidth={4} strokeLinecap="round" />
+
+      {/* risen loaf: straight tin sides, domed top */}
       <path
-        d="M14 64 C14 46 30 32 60 32 C90 32 106 46 106 64 L106 92 C106 101 97 106 84 106 L36 106 C23 106 14 101 14 92 Z"
+        d="M16 104 L16 66 C16 42 32 26 60 26 C88 26 104 42 104 66 L104 104 Z"
         className={`${crumb} ${OUTLINE}`}
         strokeWidth={SW}
         strokeLinejoin="round"
       />
-      {/* the crack down the top of every quick bread */}
+
+      {/* the split every quick bread cracks open along */}
       <path
-        d="M22 52 C36 44 48 56 62 46 C76 36 90 48 100 50"
-        className="stroke-cocoa/45"
-        strokeWidth={4}
+        d="M28 54 C38 40 46 52 58 40 C70 28 82 42 94 50"
+        className="stroke-dough"
+        strokeWidth={7}
         fill="none"
         strokeLinecap="round"
       />
+      <path
+        d="M28 54 C38 40 46 52 58 40 C70 28 82 42 94 50"
+        className="stroke-ink/35"
+        strokeWidth={2.2}
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* tin ridges */}
+      <g className="stroke-ink/20" strokeWidth={2.4} strokeLinecap="round">
+        <path d="M16 84 L104 84" />
+        <path d="M16 96 L104 96" />
+      </g>
+
       <g className={speckle}>
         {bits.map(([x, y], i) => (
           <ellipse key={i} cx={x} cy={y} rx="5" ry="3.6" transform={`rotate(${(i * 53) % 90} ${x} ${y})`} />
         ))}
       </g>
+
       {garnish}
     </svg>
   );

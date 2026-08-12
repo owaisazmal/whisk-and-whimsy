@@ -224,9 +224,9 @@ export function Hedgehog({ className = "", ...rest }) {
   const cx = 50;
   const cy = 84;
   const r = 40;
-  const spikes = Array.from({ length: 15 }, (_, i) => {
-    const a = Math.PI * (1 - i / 14) * 0.96 + Math.PI * 0.02;
-    const d = 0.055;
+  const spikes = Array.from({ length: 12 }, (_, i) => {
+    const a = Math.PI * (1 - i / 11) * 0.94 + Math.PI * 0.03;
+    const d = 0.115;
     const p = (rad, ang) => [cx + Math.cos(ang) * rad, cy - Math.sin(ang) * rad];
     const [x1, y1] = p(r - 2, a + d);
     const [x2, y2] = p(r + 13, a);
@@ -259,7 +259,7 @@ export function Hedgehog({ className = "", ...rest }) {
       {/* snout */}
       <path
         d="M84 66 C102 62 122 70 126 78 C122 88 104 92 86 88 C80 82 80 72 84 66 Z"
-        className={`fill-blush ${OUTLINE}`}
+        className={`fill-dough ${OUTLINE}`}
         strokeWidth={SW}
         strokeLinejoin="round"
       />

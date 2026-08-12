@@ -17,7 +17,7 @@ export default function Logo({ compact = false, className = "" }) {
       </motion.span>
 
       <span className="flex flex-col leading-none">
-        <span className="wonk font-display text-xl font-black tracking-tight text-ink sm:text-2xl">
+        <span className="wonk font-display text-lg font-black tracking-tight whitespace-nowrap text-ink sm:text-2xl">
           {site.nameParts[0]}
           <span className="text-coral"> {site.nameParts[1]} </span>
           {site.nameParts[2]}

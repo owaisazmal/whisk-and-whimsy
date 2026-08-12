@@ -73,7 +73,7 @@ export default function Requests() {
       {/* a loud little ribbon */}
       <div className="relative -rotate-[1.2deg]">
         <Marquee speed={26} className="border-y-[3px] border-ink bg-sunbutter py-2.5">
-          {["REQUESTS!?", "YES REALLY", "ASK FOR ANYTHING", "WE LIKE WEIRD", "BUGS WELCOME"].map((w) => (
+          {["REQUESTS!?", "YES REALLY", "ASK FOR ANYTHING", "NO IDEA TOO SILLY", "TELL US THE VIBE"].map((w) => (
             <span key={w} className="flex items-center">
               <span className="wonk px-6 font-display text-xl font-black whitespace-nowrap sm:text-2xl">{w}</span>
               <Mushroom cap="fill-coral" className="size-6 shrink-0" />

@@ -27,15 +27,16 @@ export default function Button({
   tone = "forest",
   size = "md",
   className = "",
+  innerClassName = "",
   icon,
   ...rest
 }) {
   const Tag = href ? "a" : "button";
 
   return (
-    <Wobble as={Tag} href={href} tilt={-1.5} className="inline-block" {...rest}>
+    <Wobble as={Tag} href={href} tilt={-1.5} className={`inline-block ${className}`} {...rest}>
       <span
-        className={`sticker inline-flex items-center gap-2.5 rounded-full font-extrabold tracking-tight ${TONES[tone] ?? TONES.forest} ${SIZES[size] ?? SIZES.md} ${className}`}
+        className={`sticker inline-flex items-center gap-2.5 rounded-full font-extrabold tracking-tight ${TONES[tone] ?? TONES.forest} ${SIZES[size] ?? SIZES.md} ${innerClassName}`}
       >
         {children}
         {icon}

@@ -16,8 +16,8 @@ function Column({ title, children }) {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-forest pt-20 pb-8 text-cream">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0">
+    <footer className="relative overflow-hidden bg-forest pt-20 pb-40 text-cream sm:pb-48">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-0">
         <div className="flex items-end justify-between px-4 opacity-90">
           <Float amplitude={4} rotate={2} duration={8}>
             <Tree canopy="fill-botanist" className="w-24 sm:w-32" />
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-6xl px-5 lg:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* brand */}
           <Reveal variant="up">

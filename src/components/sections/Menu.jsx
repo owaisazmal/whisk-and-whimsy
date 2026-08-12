@@ -145,7 +145,7 @@ export default function Menu() {
                   variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06 } } }}
                   initial="hidden"
                   animate="show"
-                  className="mt-7 grid gap-4 sm:grid-cols-2"
+                  className="mt-7 grid gap-4 lg:grid-cols-2"
                 >
                   {active.items.map((item, i) => (
                     <Item
@@ -153,7 +153,7 @@ export default function Menu() {
                       item={item}
                       accent={active.accent}
                       index={i}
-                      className={active.items.length === 1 ? "sm:col-span-2" : ""}
+                      className={active.items.length === 1 ? "lg:col-span-2" : ""}
                     />
                   ))}
                 </motion.ul>

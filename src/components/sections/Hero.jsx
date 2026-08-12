@@ -36,10 +36,10 @@ export default function Hero() {
         className="-z-10"
         items={[
           { el: <Butterfly className="size-16 sm:size-20" />, at: "left-[4%] top-[18%]", amp: 22, rot: 8, dur: 7, drift: 70 },
-          { el: <Ladybug className="size-10 sm:size-12" />, at: "right-[6%] top-[12%]", amp: 14, rot: 12, dur: 5.5, delay: 0.6, drift: 50 },
-          { el: <Bee className="size-12 sm:size-14" />, at: "left-[46%] top-[8%]", amp: 18, rot: 10, dur: 6.4, delay: 1.1, drift: 90 },
-          { el: <Dragonfly className="size-14" />, at: "right-[38%] bottom-[16%]", amp: 16, rot: 6, dur: 8, delay: 0.4, drift: 40 },
-          { el: <Sparkle tone="fill-sunbutter" className="size-8" />, at: "left-[26%] top-[30%]", amp: 10, dur: 4.5, delay: 0.2, drift: 25 },
+          { el: <Ladybug className="size-10 sm:size-12" />, at: "right-[6%] top-[12%] hidden sm:block", amp: 14, rot: 12, dur: 5.5, delay: 0.6, drift: 50 },
+          { el: <Bee className="size-12 sm:size-14" />, at: "left-[46%] top-[8%] hidden lg:block", amp: 18, rot: 10, dur: 6.4, delay: 1.1, drift: 90 },
+          { el: <Dragonfly className="size-14" />, at: "right-[38%] bottom-[16%] hidden sm:block", amp: 16, rot: 6, dur: 8, delay: 0.4, drift: 40 },
+          { el: <Sparkle tone="fill-sunbutter" className="size-8" />, at: "left-[26%] top-[30%] hidden lg:block", amp: 10, dur: 4.5, delay: 0.2, drift: 25 },
           { el: <Sparkle tone="fill-grape" className="size-6" />, at: "right-[18%] bottom-[30%]", amp: 12, dur: 5.2, delay: 1.4, drift: 35 },
           { el: <Fern tone="stroke-forest/60" className="size-40 sm:size-56" />, at: "-left-10 bottom-0", amp: 6, rot: 3, dur: 9, drift: -30 },
           { el: <Fern tone="stroke-forest/50" className="size-32 sm:size-44 -scale-x-100" />, at: "-right-6 bottom-6", amp: 6, rot: 3, dur: 10, delay: 0.8, drift: -20 },
@@ -57,13 +57,16 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="wonk mt-6 text-6xl leading-[0.92] font-black text-ink sm:text-7xl lg:text-8xl">
+          <h1 className="wonk mt-6 text-[3.25rem] leading-[0.92] font-black text-ink sm:text-7xl lg:text-8xl">
             <motion.span {...line(0.15)} className="block">
               Whimsy,
             </motion.span>
             <motion.span {...line(0.28)} className="relative block text-forest">
               by the dozen.
-              <Squiggle tone="stroke-coral" className="absolute -bottom-2 left-0 h-5 w-56 lg:w-72" />
+              <Squiggle
+                tone="stroke-coral"
+                className="absolute -bottom-2 left-1/2 h-5 w-56 -translate-x-1/2 lg:left-0 lg:w-72 lg:translate-x-0"
+              />
             </motion.span>
           </h1>
 

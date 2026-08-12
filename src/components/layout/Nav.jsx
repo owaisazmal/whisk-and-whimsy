@@ -91,8 +91,8 @@ export default function Nav() {
           </ul>
 
           <div className="flex items-center gap-2">
-            <Button href="#requests" tone="coral" size="sm" className="hidden sm:inline-flex">
-              Order now
+            <Button href="#requests" tone="coral" size="sm" className="hidden sm:inline-block">
+              <span className="whitespace-nowrap">Order now</span>
             </Button>
 
             <button

@@ -75,7 +75,7 @@ function PackageCard({ pkg, index }) {
         </ul>
 
         <div className="mt-8">
-          <Button href="#requests" tone="paper" className="w-full justify-center">
+          <Button href="#requests" tone="paper" className="w-full" innerClassName="w-full justify-center">
             Book this package
           </Button>
         </div>
