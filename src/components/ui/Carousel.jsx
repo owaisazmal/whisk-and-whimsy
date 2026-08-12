@@ -32,6 +32,17 @@ export default function Carousel({
    * Padding lives inside the slide's box, so Embla measures it correctly.
    */
   gap = "1.5rem",
+  /**
+   * Breathing room inside the clip box.
+   *
+   * Embla's viewport must be overflow-hidden, and it clips at the padding box.
+   * Cards here are tilted, lift on hover and carry a hard offset shadow, all of
+   * which push their painted area past their layout box — so without this they
+   * get shaved at the edges. The negative margin cancels the padding out of the
+   * layout, so slides keep their full width and no surrounding spacing moves.
+   * Padding stays smaller than `gap`, so the next slide still can't peek.
+   */
+  viewportClassName = "-mx-4 px-4 -my-6 py-6",
   showArrows = true,
   showDots = true,
   label = "carousel",
@@ -76,7 +87,12 @@ export default function Carousel({
 
   return (
     <div className={className}>
-      <div className="overflow-hidden" ref={emblaRef} aria-roledescription="carousel" aria-label={label}>
+      <div
+        className={`overflow-hidden ${viewportClassName}`}
+        ref={emblaRef}
+        aria-roledescription="carousel"
+        aria-label={label}
+      >
         <div className="flex touch-pan-y" style={{ marginLeft: `calc(${gap} * -1)` }}>
           {slides.map((slide, i) => (
             <div
