@@ -30,29 +30,35 @@ function Item({ item, accent, index, className = "" }) {
       }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       whileHover={reduce ? {} : { y: -5, scale: 1.015 }}
-      className={`sticker-sm relative flex items-center gap-4 rounded-3xl bg-paper p-4 sm:gap-5 sm:p-5 ${className}`}
+      className={`sticker-sm relative flex items-center gap-3.5 rounded-3xl bg-paper p-3 sm:gap-5 sm:p-5 ${className}`}
     >
-      <div className={`grid size-20 shrink-0 place-items-center rounded-2xl border-2 border-ink sm:size-24 ${SWATCH[accent] ?? "bg-matcha"}`}>
+      <div className={`grid size-16 shrink-0 place-items-center rounded-2xl border-2 border-ink sm:size-24 ${SWATCH[accent] ?? "bg-matcha"}`}>
         <Float amplitude={5} rotate={2} duration={5 + (index % 4) * 0.5}>
-          <TreatArt name={item.art} className="w-14 sm:w-16" />
+          <TreatArt name={item.art} className="w-11 sm:w-16" />
         </Float>
       </div>
 
       <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-baseline gap-x-2">
-          <h4 className="wonk font-display text-xl leading-tight font-black sm:text-2xl">{item.name}</h4>
-          {item.star && (
-            <span className="hand text-base text-coral" title="Popular">
-              ★ popular
-            </span>
-          )}
+        <div className="flex items-baseline justify-between gap-3">
+          <h4 className="wonk font-display text-lg leading-tight font-black text-balance sm:text-2xl">
+            {item.name}
+          </h4>
+          <div className="shrink-0 text-right">
+            <div className="wonk font-display text-xl leading-none font-black text-forest sm:text-3xl">
+              ${item.price}
+            </div>
+            <div className="mt-0.5 text-[10px] font-bold tracking-wide text-ink-soft uppercase sm:text-[11px]">
+              {item.unit}
+            </div>
+          </div>
         </div>
-        <p className="mt-1 text-sm leading-snug text-ink-soft">{item.blurb}</p>
-      </div>
 
-      <div className="shrink-0 text-right">
-        <div className="wonk font-display text-2xl font-black text-forest sm:text-3xl">${item.price}</div>
-        <div className="text-[11px] font-bold tracking-wide text-ink-soft uppercase">{item.unit}</div>
+        {item.star && (
+          <span className="hand text-base text-coral" title="Popular">
+            ★ popular
+          </span>
+        )}
+        <p className="mt-1 text-[13px] leading-snug text-ink-soft sm:text-sm">{item.blurb}</p>
       </div>
     </motion.li>
   );
@@ -76,7 +82,7 @@ export default function Menu() {
         ]}
       />
 
-      <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
         <SectionHeading
           kicker="the whole list"
           title="Menu"
@@ -132,7 +138,7 @@ export default function Menu() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="sticker-lg grain relative rounded-[36px] bg-paper p-6 sm:p-9">
+              <div className="sticker-lg grain relative rounded-[36px] bg-paper p-4 sm:p-9">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <div>
                     <span className="hand text-2xl text-forest">{active.kicker}</span>

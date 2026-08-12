@@ -526,11 +526,12 @@ export const BananaBread = (props) => (
     garnish={
       <g>
         <path
-          d="M74 22 C88 20 100 26 104 38 C96 34 86 32 76 34 C70 32 70 24 74 22 Z"
+          d="M76 8 C94 6 112 16 116 32 C110 34 106 28 100 24 C92 18 82 18 76 20 C70 18 70 10 76 8 Z"
           className={`fill-sunbutter ${OUTLINE}`}
-          strokeWidth={2.6}
+          strokeWidth={2.8}
           strokeLinejoin="round"
         />
+        <path d="M76 8 L72 2" className="stroke-cocoa" strokeWidth={3.4} strokeLinecap="round" />
       </g>
     }
     {...props}
@@ -543,8 +544,8 @@ export const ZucchiniBread = (props) => (
     speckle="fill-matcha/70"
     garnish={
       <g>
-        <rect x="72" y="14" width="34" height="15" rx="7.5" transform="rotate(-14 89 21)" className={`fill-forest ${OUTLINE}`} strokeWidth={2.6} />
-        <path d="M74 20 C70 14 70 10 72 6" className="stroke-forest" strokeWidth={3} fill="none" strokeLinecap="round" />
+        <rect x="76" y="8" width="40" height="18" rx="9" transform="rotate(-16 96 17)" className={`fill-forest ${OUTLINE}`} strokeWidth={2.8} />
+        <path d="M80 16 C74 10 74 6 76 2" className="stroke-forest" strokeWidth={3.4} fill="none" strokeLinecap="round" />
       </g>
     }
     {...props}
@@ -557,9 +558,9 @@ export const PumpkinBread = (props) => (
     speckle="fill-cocoa/30"
     garnish={
       <g>
-        <ellipse cx="88" cy="20" rx="17" ry="14" className={`fill-honey ${OUTLINE}`} strokeWidth={2.6} />
-        <path d="M80 10 C82 18 82 24 80 30 M96 10 C94 18 94 24 96 30" className="stroke-ink/40" strokeWidth={2} fill="none" />
-        <path d="M88 6 L88 2" className="stroke-forest" strokeWidth={4} strokeLinecap="round" />
+        <ellipse cx="94" cy="18" rx="20" ry="16" className={`fill-honey ${OUTLINE}`} strokeWidth={2.8} />
+        <path d="M85 5 C87 13 87 23 85 31 M103 5 C101 13 101 23 103 31" className="stroke-ink/40" strokeWidth={2.2} fill="none" />
+        <path d="M94 2 L94 -4" className="stroke-forest" strokeWidth={4.4} strokeLinecap="round" />
       </g>
     }
     {...props}

@@ -258,16 +258,16 @@ export function Hedgehog({ className = "", ...rest }) {
       </g>
       {/* snout */}
       <path
-        d="M84 66 C102 62 122 70 126 78 C122 88 104 92 86 88 C80 82 80 72 84 66 Z"
+        d="M82 62 C100 58 113 66 115 76 C113 87 98 93 82 90 C75 83 75 69 82 62 Z"
         className={`fill-dough ${OUTLINE}`}
         strokeWidth={SW}
         strokeLinejoin="round"
       />
-      <circle cx="124" cy="77" r="5" className="fill-ink" />
-      <circle cx="94" cy="72" r="4.4" className="fill-ink" />
-      <circle cx="92.6" cy="70.6" r="1.6" className="fill-paper" />
-      <circle cx="92" cy="83" r="6" className="fill-coral/60" />
-      <path d="M104 84 C108 88 114 88 118 85" className={OUTLINE} strokeWidth={2.2} fill="none" strokeLinecap="round" />
+      <circle cx="112" cy="74" r="5" className="fill-ink" />
+      <circle cx="92" cy="70" r="4.4" className="fill-ink" />
+      <circle cx="90.6" cy="68.6" r="1.6" className="fill-paper" />
+      <circle cx="90" cy="82" r="6" className="fill-coral/60" />
+      <path d="M99 83 C103 87 108 87 111 84" className={OUTLINE} strokeWidth={2.2} fill="none" strokeLinecap="round" />
       {/* ear */}
       <circle cx="80" cy="60" r="7" className={`fill-blush ${OUTLINE}`} strokeWidth={2.6} />
       {/* feet */}
