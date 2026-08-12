@@ -1,7 +1,9 @@
 # Whisk & Whimsy — bakery site (first pass)
 
-Whimsical garden-bakery site built from the client's two mood boards: the pastel
-"garden umbrella" palette and the watercolour hedgehog board.
+Bakery site with a whimsical garden *aesthetic* — bugs, mushrooms and
+botanicals as decoration, not a claim about the business. Built from the
+client's two mood boards: the pastel "garden umbrella" palette and the
+watercolour hedgehog board.
 
 ```bash
 npm install

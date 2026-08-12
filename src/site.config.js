@@ -6,7 +6,8 @@
 export const site = {
   name: "Whisk & Whimsy",
   nameParts: ["Whisk", "&", "Whimsy"],
-  tagline: "A little garden bakery",
+  // Optional line under the wordmark. Leave empty to show the name on its own.
+  tagline: "",
   blurb:
     "Small-batch cakesicles, cupcakes, cookies and warm breads — baked to order, decorated by hand, and packed like a present.",
   phone: "(555) 014-2288",

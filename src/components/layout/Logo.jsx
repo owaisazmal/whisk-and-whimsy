@@ -22,7 +22,7 @@ export default function Logo({ compact = false, className = "" }) {
           <span className="text-coral"> {site.nameParts[1]} </span>
           {site.nameParts[2]}
         </span>
-        {!compact && (
+        {!compact && site.tagline && (
           <span className="hand mt-0.5 text-base text-forest">{site.tagline}</span>
         )}
       </span>
