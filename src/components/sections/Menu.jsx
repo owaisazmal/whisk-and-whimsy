@@ -74,11 +74,11 @@ export default function Menu() {
 
       <GardenScatter
         items={[
-          { el: <Daisy className="size-16" />, at: "left-[3%] top-[14%]", amp: 8, rot: 4, dur: 7, drift: 30 },
-          { el: <Ladybug className="size-10" />, at: "right-[5%] top-[24%]", amp: 12, rot: 10, dur: 5.5, drift: 55 },
-          { el: <Clover className="size-14" />, at: "right-[8%] bottom-[12%]", amp: 7, rot: 5, dur: 8, drift: 25 },
-          { el: <Snail className="size-14" />, at: "left-[6%] bottom-[8%]", amp: 5, rot: 3, dur: 9, drift: 18 },
-          { el: <Sparkle tone="fill-grape" className="size-6" />, at: "left-[18%] top-[42%]", amp: 10, dur: 4.6, drift: 20 },
+          { el: <Daisy className="size-16" />, at: "left-[3%] top-[14%] hidden xl:block", amp: 8, rot: 4, dur: 7, drift: 30 },
+          { el: <Ladybug className="size-10" />, at: "right-[5%] top-[24%] hidden xl:block", amp: 12, rot: 10, dur: 5.5, drift: 55 },
+          { el: <Clover className="size-14" />, at: "right-[8%] bottom-[12%] hidden xl:block", amp: 7, rot: 5, dur: 8, drift: 25 },
+          { el: <Snail className="size-14" />, at: "left-[6%] bottom-[8%] hidden xl:block", amp: 5, rot: 3, dur: 9, drift: 18 },
+          { el: <Sparkle tone="fill-grape" className="size-6" />, at: "left-[18%] top-[42%] hidden xl:block", amp: 10, dur: 4.6, drift: 20 },
         ]}
       />
 

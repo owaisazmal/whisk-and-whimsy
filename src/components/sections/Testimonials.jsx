@@ -55,10 +55,10 @@ export default function Testimonials() {
         <Float amplitude={16} rotate={7} duration={8} delay={0.7} className="absolute right-[6%] top-[18%] hidden lg:block">
           <Butterfly upper="fill-coral" lower="fill-sunbutter" className="size-20" />
         </Float>
-        <Float amplitude={8} rotate={4} duration={6} className="absolute left-[14%] top-[12%] hidden sm:block">
+        <Float amplitude={8} rotate={4} duration={6} className="absolute left-[14%] top-[12%] hidden xl:block">
           <Daisy className="size-12" />
         </Float>
-        <Sparkle tone="fill-sunbutter" className="absolute right-[22%] bottom-[22%] size-7 animate-twinkle" />
+        <Sparkle tone="fill-sunbutter" className="absolute right-[22%] bottom-[22%] hidden size-7 animate-twinkle lg:block" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-5 lg:px-8">

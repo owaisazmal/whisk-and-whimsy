@@ -67,7 +67,7 @@ export default function Requests() {
         <Float amplitude={20} rotate={8} duration={7.5} delay={0.5} className="absolute right-[8%] top-[16%] hidden lg:block">
           <Butterfly upper="fill-matcha" lower="fill-sunbutter" className="size-20" />
         </Float>
-        <Sparkle tone="fill-sunbutter" className="absolute left-[18%] bottom-[26%] size-8 animate-twinkle" />
+        <Sparkle tone="fill-sunbutter" className="absolute left-[18%] bottom-[26%] hidden size-8 animate-twinkle lg:block" />
       </div>
 
       {/* a loud little ribbon */}

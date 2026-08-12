@@ -44,7 +44,7 @@ export default function Story() {
                 </div>
               </Float>
 
-              <Float amplitude={12} rotate={-4} duration={7.5} delay={0.5} className="absolute -right-3 top-[26%] w-[28%]">
+              <Float amplitude={12} rotate={-4} duration={7.5} delay={0.5} className="absolute right-0 top-[26%] w-[28%] sm:-right-3">
                 <div className="sticker relative rounded-3xl bg-paper p-3">
                   <Tape tone="bg-aqua/70" className="-top-3 left-1/2 -translate-x-1/2 rotate-6" />
                   <Cookie icing="fill-diamond" className="w-full" />
