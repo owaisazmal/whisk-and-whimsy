@@ -44,9 +44,8 @@ export default function Footer() {
                 <Mushroom cap="fill-coral" className="size-12" />
               </Float>
               <span className="wonk font-display text-3xl font-black">
-                {site.nameParts[0]}
-                <span className="text-sunbutter"> {site.nameParts[1]} </span>
-                {site.nameParts[2]}
+                {site.nameParts.lead}{" "}
+                <span className="text-sunbutter">{site.nameParts.accent}</span>
               </span>
             </div>
 

@@ -1,4 +1,4 @@
-# Whisk & Whimsy — bakery site (first pass)
+# Caked Up — bakery site (first pass)
 
 Bakery site with a whimsical garden *aesthetic* — bugs, mushrooms and
 botanicals as decoration, not a claim about the business. Built from the

@@ -4,15 +4,16 @@
  * site follows. Nothing else in the codebase hard-codes the business name.
  */
 export const site = {
-  name: "Whisk & Whimsy",
-  nameParts: ["Whisk", "&", "Whimsy"],
+  name: "Caked Up",
+  // The wordmark renders `lead` plain and `accent` in colour.
+  nameParts: { lead: "Caked", accent: "Up" },
   // Optional line under the wordmark. Leave empty to show the name on its own.
   tagline: "",
   blurb:
     "Small-batch cakesicles, cupcakes, cookies and warm breads — baked to order, decorated by hand, and packed like a present.",
   phone: "(555) 014-2288",
-  email: "hello@whiskandwhimsy.com",
-  instagram: "@whiskandwhimsy",
+  email: "hello@cakedup.com",
+  instagram: "@cakedup",
   instagramUrl: "https://instagram.com",
   city: "Baked fresh in your neighbourhood",
   hours: [

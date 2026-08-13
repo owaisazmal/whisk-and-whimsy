@@ -26,7 +26,7 @@ export const revealVariants = {
     hidden: { opacity: 0, scale: 0.82 },
     show: { opacity: 1, scale: 1 },
   },
-  /** Tips in off-kilter, then settles straight — the house "whimsy" entrance. */
+  /** Tips in off-kilter, then settles straight — the house entrance. */
   wonk: {
     hidden: { opacity: 0, y: 34, rotate: -6, scale: 0.94 },
     show: { opacity: 1, y: 0, rotate: 0, scale: 1 },

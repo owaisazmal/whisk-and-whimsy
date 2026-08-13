@@ -18,9 +18,8 @@ export default function Logo({ compact = false, className = "" }) {
 
       <span className="flex flex-col leading-none">
         <span className="wonk font-display text-lg font-black tracking-tight whitespace-nowrap text-ink sm:text-2xl">
-          {site.nameParts[0]}
-          <span className="text-coral"> {site.nameParts[1]} </span>
-          {site.nameParts[2]}
+          {site.nameParts.lead}{" "}
+          <span className="text-coral">{site.nameParts.accent}</span>
         </span>
         {!compact && site.tagline && (
           <span className="hand mt-0.5 text-base text-forest">{site.tagline}</span>

@@ -59,13 +59,13 @@ export default function Hero() {
 
           <h1 className="wonk mt-6 text-[3.25rem] leading-[0.92] font-black text-ink sm:text-7xl lg:text-8xl">
             <motion.span {...line(0.15)} className="block">
-              Whimsy,
+              Let&rsquo;s get
             </motion.span>
             <motion.span {...line(0.28)} className="relative block text-forest">
-              by the dozen.
+              caked up.
               <Squiggle
                 tone="stroke-coral"
-                className="absolute -bottom-2 left-1/2 h-5 w-56 -translate-x-1/2 lg:left-0 lg:w-72 lg:translate-x-0"
+                className="absolute -bottom-2 left-1/2 h-5 w-44 -translate-x-1/2 lg:left-0 lg:w-60 lg:translate-x-0"
               />
             </motion.span>
           </h1>
