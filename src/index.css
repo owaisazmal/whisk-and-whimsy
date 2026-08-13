@@ -151,6 +151,24 @@
     border-radius: 6px;
   }
 
+  /* iOS Safari sizes date inputs to their native shadow content and ignores
+     width:100%, so the field spills out past the form card on a phone. Blanking
+     the appearance makes it honour its width like every other input. Chrome is
+     unaffected either way and keeps its calendar picker. */
+  input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Safari centres the value inside the control; the other fields are ragged
+     left, so match them. */
+  input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+    min-width: 0;
+  }
+
   /* Chunky, friendly scrollbar to match the sticker aesthetic */
   ::-webkit-scrollbar {
     width: 12px;
