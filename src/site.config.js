@@ -3,6 +3,9 @@
  * Everything here is placeholder-friendly — swap the values and the whole
  * site follows. Nothing else in the codebase hard-codes the business name.
  */
+/** Handle only — the @ prefix and the profile URL are derived from it below. */
+const instagramHandle = "caked_uptreats";
+
 export const site = {
   name: "Caked Up",
   // The wordmark renders `lead` plain and `accent` in colour.
@@ -13,8 +16,8 @@ export const site = {
     "Small-batch cakesicles, cupcakes, cookies and warm breads — baked to order, decorated by hand, and packed like a present.",
   phone: "(555) 014-2288",
   email: "hello@cakedup.com",
-  instagram: "@cakedup",
-  instagramUrl: "https://instagram.com",
+  instagram: `@${instagramHandle}`,
+  instagramUrl: `https://www.instagram.com/${instagramHandle}/`,
   city: "Baked fresh in your neighbourhood",
   hours: [
     { day: "Tue – Fri", time: "9am – 5pm" },
